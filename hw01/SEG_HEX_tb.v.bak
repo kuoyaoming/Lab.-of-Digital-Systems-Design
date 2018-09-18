@@ -1,0 +1,23 @@
+`timescale 1ms / 1ms
+
+module SEG_HEX_tb;
+
+	reg iDIG;
+	wire oHEX_D;
+
+	SEG_HEX UDT(iDIG, oHEX_D);
+
+initial begin
+	iDIG = 0;
+	#10
+	
+	repeat(9) #5 iDIG = iDIG + 1;
+	
+	#100
+	
+	$finish;
+	
+end
+
+
+endmodule  

@@ -1,0 +1,122 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/hw01/simulation/modelsim
+vdebounce
+Z1 !s110 1523373021
+!i10b 1
+!s100 D=KHcLmeII3mF=n:06=kX3
+IEJn3`z0dG[UdjASYDKXV43
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1523265746
+8D:/hw01/debounce.v
+FD:/hw01/debounce.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1523373021.000000
+!s107 D:/hw01/debounce.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/hw01|D:/hw01/debounce.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/hw01
+Z7 tCvgOpt 0
+vFreq_Divider
+R1
+!i10b 1
+!s100 WI3LeG7fRKVBNhEbEPS^31
+ID8<Vzhf0S<aLldTK1`MWz2
+R2
+R0
+w1523264570
+8D:/hw01/Freq_Divider.v
+FD:/hw01/Freq_Divider.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1523373020.000000
+!s107 D:/hw01/Freq_Divider.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/hw01|D:/hw01/Freq_Divider.v|
+!i113 1
+R5
+R6
+R7
+n@freq_@divider
+vhw01
+Z9 !s110 1523373020
+!i10b 1
+!s100 2>]7XCA@B[FkjmP1fbdim1
+IFOE>zT[K3H]33n_J?:>A;3
+R2
+R0
+w1523263726
+8D:/hw01/hw01.v
+FD:/hw01/hw01.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/hw01/hw01.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/hw01|D:/hw01/hw01.v|
+!i113 1
+R5
+R6
+R7
+vhw01_tb
+R1
+!i10b 1
+!s100 T]IJG>91bhU;V9hT2X06D3
+I>CnH`f:FHCh3@h>;YMnCg3
+R2
+R0
+w1523372991
+8D:/hw01/hw01_tb.v
+FD:/hw01/hw01_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/hw01/hw01_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/hw01|D:/hw01/hw01_tb.v|
+!i113 1
+R5
+R6
+R7
+vSEG_HEX
+R9
+!i10b 1
+!s100 ;49?49m^k[Ecg7Yk3:4:j1
+I1??U9Yh81IQ:GLGcVRgHE2
+R2
+R0
+w1523197246
+8D:/hw01/SEG_HEX.v
+FD:/hw01/SEG_HEX.v
+L0 44
+R3
+r1
+!s85 0
+31
+R8
+!s107 D:/hw01/SEG_HEX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/hw01|D:/hw01/SEG_HEX.v|
+!i113 1
+R5
+R6
+R7
+n@s@e@g_@h@e@x

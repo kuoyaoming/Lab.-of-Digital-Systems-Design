@@ -1,0 +1,14 @@
+module counter( in, rst, out );
+	input in, rst;
+	output [3:0] out;
+	reg [3:0] out;
+	
+	always @(posedge in or negedge rst )begin
+		if( !rst )
+			out <= 4'b0000;
+		else if( cnt == 9 )
+			out <= 4'b0000;
+		else
+			out <= out + 4'b0001 ;
+	end
+endmodule 

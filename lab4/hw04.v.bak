@@ -1,0 +1,143 @@
+module hw04( CLOCK_50, KEY, LCD_BLON, LCD_ON, LCD_RS, LCD_RW, LCD_EN, LCD_DATA );
+
+	input CLOCK_50;
+	input [3:0] KEY;
+	
+	output LCD_BLON;
+	output LCD_ON;
+	output LCD_RS;
+	output LCD_RW;
+	output LCD_EN;
+	output [7:0] LCD_DATA;
+	
+	reg [31:0] cnt;
+	reg [] st;
+	reg [9:0] num = {
+							8'h30,
+							8'h31,
+							8'h32,
+							8'h33,
+							8'h34,
+							8'h35,
+							8'h36,
+							8'h37,
+							8'h38,
+							8'h39,
+							};
+	
+	assign rst = KEY[0];
+	
+	always @(posedge CLOCK_50 or negedge rst)begin
+		if(!rst)begin
+			
+		end
+		else begin
+			case(st)
+				
+				0:
+				begin
+					cnt <= cnt + 1;
+					if(cnt > 750000)//15ms開機等待
+					begin
+						cnt <= 0;
+						st <= st + 1;
+					end
+				end
+				1:
+				begin
+					LCD_DATA <= 8'b01111111;//8bit;雙排;5*10字型
+					LCD_RS <= 0;
+					LCD_RW <= 0;
+					LCD_EN <= 1;
+					st <= st + 1;
+				end
+				2:
+				begin
+					cnt <= cnt + 1;
+					if(cnt > 2500)//50us
+					begin
+						cnt <= 0;
+						st <= st + 1;
+						LCD_EN <= 0;
+					end
+				end
+				3:
+				begin
+					LCD_DATA <= 8'b00001110;//開顯示器
+					LCD_EN <= 1;
+					st <= st + 1;
+				end
+				4:
+				begin
+					cnt <= cnt + 1;
+					if(cnt > 2500)//50us
+					begin
+						cnt <= 0;
+						st <= st + 1;
+						LCD_EN <= 0;
+					end
+				end
+				5:
+				begin
+					LCD_DATA <= 8'b00000001;//清除螢幕
+					LCD_EN <= 1;
+					st <= st + 1;
+				end
+				6:
+				begin
+					cnt <= cnt + 1;
+					if(cnt > 2500)//50us
+					begin
+						cnt <= 0;
+						st <= st + 1;
+						LCD_EN <= 0;
+					end
+				end
+				7:
+				begin
+					LCD_DATA <= 8'H00;//設定初始位置
+					LCD_EN <= 1;
+					st <= st + 1;
+				end
+				8:
+				begin
+					cnt <= cnt + 1;
+					if(cnt > 2500)//50us
+					begin
+						cnt <= 0;
+						st <= st + 1;
+						LCD_EN <= 0;
+					end
+				end
+				9 :
+				begin
+					LCD_DATA <= 8'H80;
+					LCD_RS <= 1;
+					LCD_EN <= 1;
+					st <= st + 1;
+				end
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					st <= st + 1;
+				
+				
+				
+				
+				
+						
+		end
+	end
+	
+endmodule 

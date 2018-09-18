@@ -1,0 +1,9 @@
+module test_hw1;
+
+reg key , clk ;
+
+wire hex;
+
+initial
+
+endmodule 

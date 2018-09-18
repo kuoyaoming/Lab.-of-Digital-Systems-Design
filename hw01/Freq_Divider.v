@@ -1,0 +1,29 @@
+module Freq_Divider( CLK, RST, CLK_Out ); //50MHz => 1KHz
+
+    parameter    Div  = 20'd50_000;
+    parameter    Div2 = 20'd25_000;
+    parameter    DivW = 20;
+
+    input   CLK, RST;
+    output  CLK_Out;
+    reg     CLK_Out;
+    reg     [DivW-1:0] CLK_Cnt = 0;
+
+    always @( posedge CLK, negedge RST ) begin
+        if( !RST )
+            CLK_Cnt <= 0;
+        else if( CLK_Cnt == Div-1 )
+            CLK_Cnt <= 0;
+        else
+            CLK_Cnt <= CLK_Cnt + 1'b1;
+    end
+    always @( posedge CLK or negedge RST ) begin
+        if( !RST )
+            CLK_Out <= 0;
+        else if( CLK_Cnt <= Div2-1 )
+            CLK_Out <= 0;
+        else
+            CLK_Out <= 1'b1;
+    end
+
+endmodule 

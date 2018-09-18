@@ -1,0 +1,28 @@
+`timescale 1ms / 1ms
+
+module key_tb;
+
+reg CLK, RST, KEY_In;
+wire KEY_Out;
+
+KEY_Debounce UDT(
+	CLK, RST, KEY_In, KEY_Out
+);
+
+initial begin
+	CLK = 0;
+	RST = 0;
+	KEY_In = 0;
+	#10	
+	RST = 1;
+	repeat(7) #1 KEY_In = ~KEY_In;
+	
+	#1000
+	
+	$finish;
+	
+end
+
+always CLK = #5 ~CLK;
+
+endmodule  

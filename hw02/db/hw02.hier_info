@@ -1,0 +1,214 @@
+|hw02
+CLOCK_50 => CLOCK_50.IN4
+KEY[0] => key_s.IN1
+KEY[1] => key_m.IN1
+HEX0[0] << SEG_HEX:s1.oHEX_D
+HEX0[1] << SEG_HEX:s1.oHEX_D
+HEX0[2] << SEG_HEX:s1.oHEX_D
+HEX0[3] << SEG_HEX:s1.oHEX_D
+HEX0[4] << SEG_HEX:s1.oHEX_D
+HEX0[5] << SEG_HEX:s1.oHEX_D
+HEX0[6] << SEG_HEX:s1.oHEX_D
+HEX1[0] << SEG_HEX:s2.oHEX_D
+HEX1[1] << SEG_HEX:s2.oHEX_D
+HEX1[2] << SEG_HEX:s2.oHEX_D
+HEX1[3] << SEG_HEX:s2.oHEX_D
+HEX1[4] << SEG_HEX:s2.oHEX_D
+HEX1[5] << SEG_HEX:s2.oHEX_D
+HEX1[6] << SEG_HEX:s2.oHEX_D
+HEX2[0] << SEG_HEX:s3.oHEX_D
+HEX2[1] << SEG_HEX:s3.oHEX_D
+HEX2[2] << SEG_HEX:s3.oHEX_D
+HEX2[3] << SEG_HEX:s3.oHEX_D
+HEX2[4] << SEG_HEX:s3.oHEX_D
+HEX2[5] << SEG_HEX:s3.oHEX_D
+HEX2[6] << SEG_HEX:s3.oHEX_D
+HEX3[0] << SEG_HEX:s4.oHEX_D
+HEX3[1] << SEG_HEX:s4.oHEX_D
+HEX3[2] << SEG_HEX:s4.oHEX_D
+HEX3[3] << SEG_HEX:s4.oHEX_D
+HEX3[4] << SEG_HEX:s4.oHEX_D
+HEX3[5] << SEG_HEX:s4.oHEX_D
+HEX3[6] << SEG_HEX:s4.oHEX_D
+
+
+|hw02|clock_1k:clock_1k
+CLK => CLK_Out~reg0.CLK
+CLK => CLK_Cnt[0].CLK
+CLK => CLK_Cnt[1].CLK
+CLK => CLK_Cnt[2].CLK
+CLK => CLK_Cnt[3].CLK
+CLK => CLK_Cnt[4].CLK
+CLK => CLK_Cnt[5].CLK
+CLK => CLK_Cnt[6].CLK
+CLK => CLK_Cnt[7].CLK
+CLK => CLK_Cnt[8].CLK
+CLK => CLK_Cnt[9].CLK
+CLK => CLK_Cnt[10].CLK
+CLK => CLK_Cnt[11].CLK
+CLK => CLK_Cnt[12].CLK
+CLK => CLK_Cnt[13].CLK
+CLK => CLK_Cnt[14].CLK
+CLK => CLK_Cnt[15].CLK
+CLK => CLK_Cnt[16].CLK
+CLK => CLK_Cnt[17].CLK
+CLK => CLK_Cnt[18].CLK
+CLK => CLK_Cnt[19].CLK
+RST => CLK_Cnt[0].ACLR
+RST => CLK_Cnt[1].ACLR
+RST => CLK_Cnt[2].ACLR
+RST => CLK_Cnt[3].ACLR
+RST => CLK_Cnt[4].ACLR
+RST => CLK_Cnt[5].ACLR
+RST => CLK_Cnt[6].ACLR
+RST => CLK_Cnt[7].ACLR
+RST => CLK_Cnt[8].ACLR
+RST => CLK_Cnt[9].ACLR
+RST => CLK_Cnt[10].ACLR
+RST => CLK_Cnt[11].ACLR
+RST => CLK_Cnt[12].ACLR
+RST => CLK_Cnt[13].ACLR
+RST => CLK_Cnt[14].ACLR
+RST => CLK_Cnt[15].ACLR
+RST => CLK_Cnt[16].ACLR
+RST => CLK_Cnt[17].ACLR
+RST => CLK_Cnt[18].ACLR
+RST => CLK_Cnt[19].ACLR
+RST => CLK_Out~reg0.ACLR
+CLK_Out <= CLK_Out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|clock_1s:clock_1s
+CLK => CLK_Out~reg0.CLK
+CLK => CLK_Cnt[0].CLK
+CLK => CLK_Cnt[1].CLK
+CLK => CLK_Cnt[2].CLK
+CLK => CLK_Cnt[3].CLK
+CLK => CLK_Cnt[4].CLK
+CLK => CLK_Cnt[5].CLK
+CLK => CLK_Cnt[6].CLK
+CLK => CLK_Cnt[7].CLK
+CLK => CLK_Cnt[8].CLK
+CLK => CLK_Cnt[9].CLK
+CLK => CLK_Cnt[10].CLK
+CLK => CLK_Cnt[11].CLK
+CLK => CLK_Cnt[12].CLK
+CLK => CLK_Cnt[13].CLK
+CLK => CLK_Cnt[14].CLK
+CLK => CLK_Cnt[15].CLK
+CLK => CLK_Cnt[16].CLK
+CLK => CLK_Cnt[17].CLK
+CLK => CLK_Cnt[18].CLK
+CLK => CLK_Cnt[19].CLK
+CLK => CLK_Cnt[20].CLK
+CLK => CLK_Cnt[21].CLK
+CLK => CLK_Cnt[22].CLK
+CLK => CLK_Cnt[23].CLK
+CLK => CLK_Cnt[24].CLK
+CLK => CLK_Cnt[25].CLK
+CLK => CLK_Cnt[26].CLK
+CLK => CLK_Cnt[27].CLK
+RST => CLK_Cnt[0].ACLR
+RST => CLK_Cnt[1].ACLR
+RST => CLK_Cnt[2].ACLR
+RST => CLK_Cnt[3].ACLR
+RST => CLK_Cnt[4].ACLR
+RST => CLK_Cnt[5].ACLR
+RST => CLK_Cnt[6].ACLR
+RST => CLK_Cnt[7].ACLR
+RST => CLK_Cnt[8].ACLR
+RST => CLK_Cnt[9].ACLR
+RST => CLK_Cnt[10].ACLR
+RST => CLK_Cnt[11].ACLR
+RST => CLK_Cnt[12].ACLR
+RST => CLK_Cnt[13].ACLR
+RST => CLK_Cnt[14].ACLR
+RST => CLK_Cnt[15].ACLR
+RST => CLK_Cnt[16].ACLR
+RST => CLK_Cnt[17].ACLR
+RST => CLK_Cnt[18].ACLR
+RST => CLK_Cnt[19].ACLR
+RST => CLK_Cnt[20].ACLR
+RST => CLK_Cnt[21].ACLR
+RST => CLK_Cnt[22].ACLR
+RST => CLK_Cnt[23].ACLR
+RST => CLK_Cnt[24].ACLR
+RST => CLK_Cnt[25].ACLR
+RST => CLK_Cnt[26].ACLR
+RST => CLK_Cnt[27].ACLR
+RST => CLK_Out~reg0.ACLR
+CLK_Out <= CLK_Out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|debounce:debounce1
+clk => Bounce[0].CLK
+rst => Bounce[0].ACLR
+f => Bounce[0].ENA
+key_i => Bounce[0].DATAIN
+key_o <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|debounce:debounce2
+clk => Bounce[0].CLK
+rst => Bounce[0].ACLR
+f => Bounce[0].ENA
+key_i => Bounce[0].DATAIN
+key_o <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|SEG_HEX:s1
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+oHEX_D[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|SEG_HEX:s2
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+oHEX_D[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|SEG_HEX:s3
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+oHEX_D[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|hw02|SEG_HEX:s4
+iDIG[0] => Decoder0.IN3
+iDIG[1] => Decoder0.IN2
+iDIG[2] => Decoder0.IN1
+iDIG[3] => Decoder0.IN0
+oHEX_D[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+oHEX_D[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

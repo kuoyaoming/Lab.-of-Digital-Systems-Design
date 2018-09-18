@@ -1,0 +1,25 @@
+module debounce( clk, rst, key_i, key_o );
+
+	input   clk, rst;
+	input   key_i;
+	output  key_o;
+ 
+	reg     key_o = 1;
+	reg     [3:0] Bounce = 4'b1111;
+	integer    i;	
+   always @( posedge clk, negedge rst ) begin  //200Hz 5ms
+       if( !rst )
+           Bounce <= 4'b1111;
+       else begin
+            
+           Bounce[0] <= key_i;
+           for( i=0; i<3; i=i+1 )
+                Bounce[i+1] <= Bounce[i];
+       end
+       case( Bounce )
+           4'b0000:    key_o <= 0;
+           default:    key_o <= 1;
+       endcase
+   end
+
+endmodule 
